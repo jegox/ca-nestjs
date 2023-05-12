@@ -2,7 +2,6 @@ import { join } from 'path';
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigModule } from '@nestjs/config';
-import { AuthModule } from './core/auth.module';
 import { CommonModule } from './common.module';
 import { CoreModule } from './core.module';
 import { AppController } from '../controllers/app.controller';
@@ -40,7 +39,6 @@ import { JwtModule } from '@nestjs/jwt';
     }),
     CommonModule,
     CoreModule,
-    AuthModule,
   ],
   controllers: [AppController],
 })
